@@ -1152,3 +1152,8 @@ void CPlayer::SpectatePlayerName(const char *pName)
 		}
 	}
 }
+
+void CPlayer::SetClass(int Class)
+{
+	m_Class = Class;
+}

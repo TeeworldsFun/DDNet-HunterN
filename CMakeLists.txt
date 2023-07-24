@@ -932,6 +932,7 @@ set_src(ENGINE_SERVER GLOB_RECURSE src/engine/server
 )
 set_src(GAME_SERVER GLOB_RECURSE src/game/server
   alloc.h
+  classes.h
   ddracechat.cpp
   ddracecommands.cpp
   entities/character.cpp
@@ -981,6 +982,8 @@ set_src(GAME_SERVER GLOB_RECURSE src/game/server
   gamemodes/lts.h
   gamemodes/tdm.cpp
   gamemodes/tdm.h
+  gamemodes/huntern.cpp
+  gamemodes/huntern.h
   gameworld.cpp
   gameworld.h
   player.cpp

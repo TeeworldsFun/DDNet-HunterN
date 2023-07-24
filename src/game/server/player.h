@@ -257,6 +257,13 @@ public:
 
 	class CFlag *m_pSpecFlag;
 	bool m_ActiveSpecSwitch;
+
+public:
+	// Class
+	int m_Class;
+
+	void SetClass(int Class);
+	int GetClass() { return m_Class; }
 };
 
 #endif

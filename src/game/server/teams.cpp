@@ -290,7 +290,7 @@ bool CGameTeams::CreateGameInstance(int Team, const char *pGameName, int Asker)
 #undef REGISTER_GAME_TYPE
 	else
 	{
-		Game = new CGameControllerDM();
+		Game = new CGCHunterN();
 		Type.pSettings = nullptr;
 	}
 

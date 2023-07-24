@@ -1,0 +1,18 @@
+# dm room config
+
+# game settings
+map hunter1
+timelimit 5
+warmup 0
+powerups 1
+
+# room votes
+add_vote " " "info"
+add_vote "=== 房间设置 ===" "info"
+add_vote "重新开始" "restart"
+
+# add mode switch votes
+exec "room_config/modes.rcfg"
+
+# add map votes
+exec "room_config/maps/hunter.rcfg"
