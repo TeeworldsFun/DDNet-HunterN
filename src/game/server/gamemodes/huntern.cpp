@@ -22,7 +22,6 @@ CGCHunterN::CGCHunterN() :
 
 void CGCHunterN::OnCharacterSpawn(CCharacter *pChr)
 {
-	m_PlayersInRoom.add(pChr->GetPlayer());
 	pChr->IncreaseHealth(10);
 
 	pChr->GiveWeapon(WEAPON_GUN, WEAPON_ID_PISTOL, 10);
@@ -31,7 +30,7 @@ void CGCHunterN::OnCharacterSpawn(CCharacter *pChr)
 
 int CGCHunterN::OnCharacterDeath(CCharacter *pVictim, CPlayer *pKiller, int Weapon)
 {
-	m_PlayersInRoom.remove(pVictim->GetPlayer());
+
 }
 
 void CGCHunterN::ChooseClass()
@@ -72,11 +71,15 @@ void CGCHunterN::ChooseClass()
 			short NewHunter;
 			while(!NewHunter)
 			{
-				short RandChoose = rand() % m_PlayersInRoom.size();
-				if(m_PlayersInRoom[RandChoose]->GetClass() == PLAYERCLASS_HUNTER)
+				short RandChoose = rand()%MAX_CLIENTS;
+
+				if(!GetPlayerIfInRoom(RandChoose))
 					continue;
 
-				NewHunter = m_PlayersInRoom[RandChoose]->GetCID();
+				if(GetPlayerIfInRoom(RandChoose)->GetClass() == PLAYERCLASS_HUNTER)
+					continue;
+
+				NewHunter = RandChoose;
 			}
 
 			// generate info message
@@ -139,5 +142,10 @@ void CGCHunterN::OnWorldReset()
 
 void CGCHunterN::OnPlayerLeave(CPlayer *pPlayer)
 {
-	m_PlayersInRoom.remove(pPlayer);
+
+}
+
+void CGCHunterN::OnPostTick()
+{
+	
 }

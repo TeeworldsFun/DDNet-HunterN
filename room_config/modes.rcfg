@@ -1,8 +1,6 @@
 # room config (mode votes)
 
-add_vote "（主要模式）改变游戏模式: HunterN (猎人N模式)" "gametype huntern"
-add_vote "（主要模式）改变游戏模式: HunterN (猎人N模式)" "gametype huntern"
-add_vote "（主要模式）改变游戏模式: HunterN (猎人N模式)" "gametype huntern"
+add_vote "（主要模式）改变游戏模式: HunterN (猎人N)" "gametype huntern"
 add_vote "改变游戏模式: Deathmatch" "gametype dm"
 add_vote "改变游戏模式: Team Deathmatch" "gametype tdm"
 add_vote "改变游戏模式: Capture the Flag" "gametype ctf"

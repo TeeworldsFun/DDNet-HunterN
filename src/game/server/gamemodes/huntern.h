@@ -16,14 +16,13 @@ public:
 	CGCHunterN();
 
 	// event
+	virtual void OnPostTick() override;
 	virtual void OnCharacterSpawn(class CCharacter *pChr) override;
 	virtual int OnCharacterDeath(class CCharacter *pVictim, class CPlayer *pKiller, int Weapon) override;
 	virtual void OnWorldReset() override;
 	virtual void OnPlayerLeave(CPlayer *pPlayer) override;
 	
 	void ChooseClass();
-
-	array<CPlayer *> m_PlayersInRoom;
 
 	int m_Hunters;
 	int m_Civics;
